@@ -2,16 +2,16 @@ package com.jojoldu.book.spring.web;
 
 
 import com.jojoldu.book.spring.service.PostsService;
-import com.jojoldu.book.spring.web.dto.PostsResponseDto;
-import com.jojoldu.book.spring.web.dto.PostsSaveRequestDto;
-import com.jojoldu.book.spring.web.dto.PostsUpdateRequestDto;
+import com.jojoldu.book.spring.web.dto.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
-
 public class PostsApiController {
+
     private final PostsService postsService;
 
     @PostMapping("/api/v1/posts")
@@ -35,6 +35,10 @@ public class PostsApiController {
         return postsService.findById(id);
     }
 
+    @GetMapping("/api/v1/posts/list")
+    public List<PostsListResponseDto> findAll() {
+        return postsService.findAllDesc();
+    }
 
 
 }

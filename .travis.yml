@@ -15,7 +15,7 @@ script: "./gradlew clean build"
 
 
 before_deploy:
-  - zip -r projectx
+  - zip -r projectx *
   - mkdir -p deploy
   - mv projectx.zip deploy/projectx.zip
 

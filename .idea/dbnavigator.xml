@@ -26,14 +26,14 @@
     <show-object-properties value="false" />
     <loaded-nodes>
       <connection connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583">
-        <schema name="projectx" object-types="table, view" />
+        <schema name="projectx" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="fefee8b8-b654-4c17-9946-91d35d6dc583">
       <console name="Connection" type="STANDARD" schema="mysql" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from test;]]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[create table user (id bigint not null auto_increment, created_date datetime, modified_date datetime, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -41,6 +41,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="fefee8b8-b654-4c17-9946-91d35d6dc583" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.user" active-filter-id="" />
+    <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.test" active-filter-id="" />
+    <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.posts" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -87,7 +92,7 @@
           <deprecated-pwd value="ZXBhcHptMTI=" />
         </database>
         <properties>
-          <auto-commit value="false" />
+          <auto-commit value="true" />
         </properties>
         <ssh-settings>
           <active value="false" />

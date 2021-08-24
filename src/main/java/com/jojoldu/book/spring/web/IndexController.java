@@ -30,6 +30,11 @@ public class IndexController {
         model1.addAttribute("posts", postsService.findDesc());
         return "newindex";
     }
+    @GetMapping("/posts/main")
+    public String main(Model model2){
+        model2.addAttribute("posts",postsService.findDesc());
+        return "main";
+    }
     @GetMapping("/api/v1/posts/revise/{id}")
     public String revise(@PathVariable Long id ){
         postsService.revise(id);

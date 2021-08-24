@@ -36,7 +36,7 @@ deploy:
     key: projectx.zip
     bundle_type: zip
     application: projectx
-    deployment_group: project-group
+    deployment_group: projectx-group
     region: ap-northeast-2
     wait-until-deployed: true
 

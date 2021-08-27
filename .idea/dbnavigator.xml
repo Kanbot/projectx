@@ -24,12 +24,16 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583">
+        <schema name="projectx" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="fefee8b8-b654-4c17-9946-91d35d6dc583">
       <console name="Connection" type="STANDARD" schema="mysql" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[create table user (id bigint not null auto_increment, created_date datetime, modified_date datetime, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB]]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from posts]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

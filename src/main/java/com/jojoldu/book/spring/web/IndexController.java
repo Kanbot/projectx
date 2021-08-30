@@ -23,7 +23,7 @@ public class IndexController {
         if(user != null){
             model.addAttribute("user",user.getName());
         }
-        return "home";
+        return "index";
     }
     @GetMapping("/posts/new")
     public String index1(Model model1) {
@@ -32,7 +32,7 @@ public class IndexController {
     }
     @GetMapping("/posts/main")
     public String main(){
-        return "index";
+        return "home";
     }
     @GetMapping("/api/v1/posts/revise/{id}")
     public String revise(@PathVariable Long id ){

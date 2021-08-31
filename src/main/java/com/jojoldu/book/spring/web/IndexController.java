@@ -32,7 +32,10 @@ public class IndexController {
     }
     @GetMapping("/posts/main")
     public String main(Model model ,@LoginUser SessionUser user){
-        model.addAttribute("pots",postsService.findAllDesc());
+        model.addAttribute("posts",postsService.findAllDesc());
+        if(user != null){
+            model.addAttribute("user",user.getName());
+        }
         return "index";
     }
     @GetMapping("/api/v1/posts/revise/{id}")

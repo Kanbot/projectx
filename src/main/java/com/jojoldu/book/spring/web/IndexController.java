@@ -31,7 +31,8 @@ public class IndexController {
         return "newindex";
     }
     @GetMapping("/posts/main")
-    public String main(){
+    public String main(Model model ,@LoginUser SessionUser user){
+        model.addAttribute("pots",postsService.findAllDesc());
         return "index";
     }
     @GetMapping("/api/v1/posts/revise/{id}")

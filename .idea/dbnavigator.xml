@@ -45,6 +45,7 @@
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.user" active-filter-id="" />
     <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.test" active-filter-id="" />
+    <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.SPRING_SESSION" active-filter-id="" />
     <filter-actions connection-id="fefee8b8-b654-4c17-9946-91d35d6dc583" dataset="projectx.posts" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">

@@ -68,4 +68,11 @@ public class IndexController {
 
         return  "blog/post";}
 
+    //블로그 글쓰기 이동
+    @GetMapping("/posts/insert")
+    public String insert(){
+        return  "blog/insert";
+    }
+
 }
+

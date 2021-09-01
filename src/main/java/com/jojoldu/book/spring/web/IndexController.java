@@ -23,43 +23,49 @@ public class IndexController {
         return "home";
     }
 
-    @GetMapping("/posts/new")
-    public String index1(Model model1) {
-        model1.addAttribute("posts", postsService.findDesc());
-        return "newindex";
-    }
+    //인덱스 화면
     @GetMapping("/posts/main")
     public String main(Model model ,@LoginUser SessionUser user){
         model.addAttribute("posts",postsService.findAllDesc());
         if(user != null){
             model.addAttribute("user",user.getName());
         }
-        return "index";
+        return "index/index";
     }
+
+    //경고 화면
     @GetMapping("/api/v1/posts/revise/{id}")
     public String revise(@PathVariable Long id ){
         postsService.revise(id);
-        return "/";
+        return "index/index";
     }
-
+    //저장 화면
     @GetMapping("/posts/save")
     public String postsSave(){
-        return "posts-save";
+        return "index/posts-save";
     }
 
+    //수정 화면
     @GetMapping("/posts/update/{id}")
     public String postUpdate(@PathVariable Long id ,Model model){
         PostsResponseDto dto =postsService.findById(id);
         model.addAttribute("post",dto);
-        return "posts-update";
+        return "index/posts-update";
     }
-    @GetMapping("/posts/text")
-    public  String text(){
-        return "index";
+
+    //블로그 이동
+    @GetMapping("/posts/blog")
+    public String info(Model model){
+        model.addAttribute("posts",postsService.findAllDesc());
+
+        return "blog/blog";
     }
-    @GetMapping("/posts/info")
-    public String info(){
-        return "index1";
-    }
+
+    //블로그 포스트 이동
+    @GetMapping("/posts/posts")
+    public String post(Model model){
+        model.addAttribute("posts",postsService.findAllDesc());
+
+        return  "blog/post";}
 
 }

@@ -33,7 +33,7 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="fefee8b8-b654-4c17-9946-91d35d6dc583">
       <console name="Connection" type="STANDARD" schema="mysql" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from user]]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from posts]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

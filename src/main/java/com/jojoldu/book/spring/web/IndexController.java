@@ -17,10 +17,12 @@ import javax.servlet.http.HttpSession;
 public class IndexController {
     private final PostsService postsService;
 
+    //메인 화면
     @GetMapping("/")
     public String index( ) {
         return "home";
     }
+
     @GetMapping("/posts/new")
     public String index1(Model model1) {
         model1.addAttribute("posts", postsService.findDesc());

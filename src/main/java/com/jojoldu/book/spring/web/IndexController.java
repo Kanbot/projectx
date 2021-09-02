@@ -62,9 +62,10 @@ public class IndexController {
     }
 
     //블로그 포스트 이동
-    @GetMapping("/posts/posts")
-    public String post(Model model){
-        model.addAttribute("posts",postsService.findAllDesc());
+    @GetMapping("/posts/posts/{id}")
+    public String post(@PathVariable Long id, Model model){
+        PostsResponseDto dto  =postsService.findById(id);
+        model.addAttribute("posts",dto);
 
         return  "blog/post";}
 

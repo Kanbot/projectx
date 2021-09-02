@@ -33,7 +33,7 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437">
       <console name="Connection" type="STANDARD" schema="projectx" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[update posts set category ='dd' where id =13]]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from posts]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

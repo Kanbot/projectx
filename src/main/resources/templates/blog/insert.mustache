@@ -41,7 +41,7 @@ $(document).ready(function() {
             <li class="form-line" data-type="control_textbox" id="id_17">
                 <label class="form-label form-label-top form-label-auto" id="label_17" for="input_17"> 작성자 </label>
                 <div id="cid_17" class="form-input-wide" data-layout="half">
-                    <input type="text" id="author" name="author" data-type="input-textbox" class="form-textbox" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_17" />
+                    <input type="text" id="author" name="author" data-type="input-textbox" class="form-textbox" value="유승호" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_17" />
                 </div>
             </li>
             <li class="form-line" data-type="control_dropdown" id="id_16">
@@ -52,6 +52,9 @@ $(document).ready(function() {
                         <option value="java"> java </option>
                         <option value="java script"> java script </option>
                         <option value="android"> android </option>
+                        <option value="server">server</option>
+                        <option value="direct">직접입력</option>
+                        <input type="text" id="selboxDirect" name="selboxDirect" data-type="input-textbox" class="form-textbox"  style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_17" />
                     </select>
                 </div>
             </li>
@@ -81,6 +84,35 @@ $(document).ready(function() {
 
 <!--index.js 추가-->
 <script src="/js/app/index.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+
+$("#selboxDirect").hide();
+
+
+
+$("#category").change(function() {
+
+
+		if($("#category").val() == "direct") {
+
+			$("#selboxDirect").show();
+
+		}  else {
+
+			$("#selboxDirect").hide();
+
+		}
+
+
+
+	})
+
+});
+</script>
+
 </body>
 
 {{>layout/insert/footer}}

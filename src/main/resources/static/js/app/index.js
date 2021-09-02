@@ -22,13 +22,13 @@ var main = {
             title: $('#title').val(),
             author: $('#author').val(),
             content: $('#summernote').val(),
-            if($('#category') == "direct"){
-            category: $('#selboxDirect').val()
-            }else{
             category: $('#category').val()
-            }
         };
-
+        if(category == "direct"){
+            var date ={
+            category: $('#selboxDirec').val()
+            };
+        }
         $.ajax({
             type: 'POST',
             url: '/api/v1/posts',

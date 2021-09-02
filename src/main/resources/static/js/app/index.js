@@ -27,8 +27,13 @@ var main = {
         };
         if($('#category').val() == "direct"){
 
-            category: $('#selboxDirect').val()
+            var data = {
+                        title: $('#title').val(),
+                        author: $('#author').val(),
+                        content: $('#summernote').val(),
+                        category: $('#selboxDirect').val()
 
+                    };
 
         }
         $.ajax({

@@ -21,7 +21,7 @@ var main = {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#summernote').val()
+            content: $('#summernote').val(),
             category: $('#category').val()
         };
 

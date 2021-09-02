@@ -26,9 +26,9 @@ var main = {
 
         };
         if($('#category').val() == "direct"){
-            var date = {
+
             category: $('#selboxDirect').val()
-            }
+
 
         }
         $.ajax({

@@ -25,7 +25,12 @@ var main = {
             category: $('#category').val()
 
         };
-        alert(category);
+        if($('#category').val() == "direct"){
+            var date = {
+            category: $('#selboxDirect').val()
+            }
+
+        }
         $.ajax({
             type: 'POST',
             url: '/api/v1/posts',

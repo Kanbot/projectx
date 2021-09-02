@@ -24,7 +24,7 @@ var main = {
             content: $('#summernote').val(),
             category: $('#category').val()
         };
-        if(category == "direct"){
+        if("direct" == category ){
             var date ={
             category: $('#selboxDirec').val()
             };

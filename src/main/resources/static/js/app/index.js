@@ -23,12 +23,9 @@ var main = {
             author: $('#author').val(),
             content: $('#summernote').val(),
             category: $('#category').val()
+
         };
-        if("direct" == category ){
-            var date ={
-            category: $('#selboxDirec').val()
-            };
-        }
+        alert(category);
         $.ajax({
             type: 'POST',
             url: '/api/v1/posts',

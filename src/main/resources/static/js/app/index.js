@@ -13,15 +13,15 @@ var main = {
             _this.delete();
         });
 
-        $('#btn-revise').on('click', function () {
-                    _this.revise();
+        $('#btn-email').on('click', function () {
+                    _this.email();
                 });
     },
     save : function () {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#content').val()
+            content: $('#content1').val()
         };
 
         $.ajax({
@@ -59,16 +59,12 @@ var main = {
         });
     },
 
-     revise : function () {
+     email : function () {
 
             $.ajax({
-                type: 'GET',
-                url: '/api/v1/posts',
-                dataType: 'json',
-                contentType:'application/json; charset=utf-8',
-                data: JSON.stringify(data)
+
             }).done(function() {
-                alert('글이 수정되었습니다.');
+                alert('이메일이 전송되었습니다');
                 window.location.href = '/';
             }).fail(function (error) {
                 alert(JSON.stringify(error));

@@ -1,76 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <!-- include libraries(jQuery, bootstrap) -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
-    <!-- include summernote css/js-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
-    <!-- include summernote-ko-KR -->
-    <script src="/js/app/js/summernote-ko-KR.js"></script>
-    <title>글쓰기</title>
-
-    <script>
+{{>layout/insert/header}}
+<body>
+<script>
 $(document).ready(function() {
-var fonts = ['맑은 고딕', '돋움', '궁서', '굴림', '굴림체', '궁서체', '나눔 고딕', '바탕', '바탕체', '새굴림', 'HY견고딕', 'HY견명조', 'HY궁서B', 'HY그래픽M', 'HY목각파임B', 'HY신명조', 'HY얕은샘물M', 'HY엽서L', 'HY엽서M', 'HY중고딕', 'HY헤드라인M', '휴먼매직체', '휴먼모음T', '휴먼아미체', '휴먼둥근헤드라인', '휴먼편지체', '휴먼옛체'];
+
 	  $('#summernote').summernote({
  	    	placeholder: 'content',
 	        minHeight: null,
 	        maxHeight: null,
 	        focus: true,
-	        lang : 'ko-KR'
-	        prettifyHtml:false,
-    fontNames: fonts.sort(),
-       imageTitle: {
-       	specificAltField: true,
-       },
-       popover: {
-           image: [
-           	['imageResize', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
-               ['float', ['floatLeft', 'floatRight', 'floatNone']],
-               ['remove', ['removeMedia']],
-               ['custom', ['imageTitle']],
-           ],
-       },
-	toolbar: [
-		['Font Style', ['fontname']],
-		['fontsize', ['fontsize']],
-		['style', ['style']],
-		['style', ['bold', 'italic', 'underline']],
-		['font', ['strikethrough']],
-		['color', ['color']],
-		['para', ['paragraph']],
-		['height', ['height']],
-		['Insert', ['table']],
-		['Insert', ['picture']],
-		['Insert', ['video']],
-		['Insert', ['link']],
-		['misc', ['emoji']],
-		['insert',  ['map']],
-	        ['highlight', ['highlight']],
-		['code', ['fullscreen', 'codeview']]
-	]
+	        lang : 'ko-KR',
+	        prettifyHtml:false
 	  });
 	});
 
 </script>
-</head>
-<body>
-<h2 style="text-align: center;">글 작성</h2><br><br><br>
+<form class="jotform-form" action="https://submit.jotform.com/submit/212438682252456/" method="post" name="form_212438682252456" id="212438682252456" accept-charset="utf-8" autocomplete="on">
+    <input type="hidden" name="formID" value="212438682252456" />
+    <input type="hidden" id="JWTContainer" value="" />
+    <input type="hidden" id="cardinalOrderNumber" value="" />
+    <div role="main" class="form-all">
+        <style>
+      .form-all:before { background: none;}
+    </style>
+        <ul class="form-section page-section">
+            <li id="cid_1" class="form-input-wide" data-type="control_head">
+                <div class="form-header-group  header-large">
+                    <div class="header-text httal htvam">
+                        <h1 id="header_1" class="form-header" data-component="header">
+                            글쓰기
+                        </h1>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_textbox" id="id_15">
+                <label class="form-label form-label-top form-label-auto" id="label_15" for="input_15"> 제목 </label>
+                <div id="cid_15" class="form-input-wide" data-layout="half">
+                    <input type="text" id="title" name="title" data-type="input-textbox" class="form-textbox" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_15" />
+                </div>
+            </li>
+            <li class="form-line" data-type="control_textbox" id="id_17">
+                <label class="form-label form-label-top form-label-auto" id="label_17" for="input_17"> 작성자 </label>
+                <div id="cid_17" class="form-input-wide" data-layout="half">
+                    <input type="text" id="author" name="author" data-type="input-textbox" class="form-textbox" style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_17" />
+                </div>
+            </li>
+            <li class="form-line" data-type="control_dropdown" id="id_16">
+                <label class="form-label form-label-top form-label-auto" id="label_16" for="input_16"> 카테고리 </label>
+                <div id="cid_16" class="form-input-wide" data-layout="half">
+                    <select class="form-dropdown" id="category" name="category" style="width:310px" data-component="dropdown">
+                        <option value=""> Please Select </option>
+                        <option value="">  </option>
+                    </select>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_textarea" id="id_12">
+                <label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> 내용 </label>
+                <div id="cid_12" class="form-input-wide" data-layout="full">
+                    <textarea id="summernote" name="content"></textarea>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_button" id="id_2">
+                <div id="cid_2" class="form-input-wide" data-layout="full">
+                    <div data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
 
-<div style="width: 60%; margin: auto;">
-    <form method="post" action="/write">
-        <input type="text" name="writer" style="width: 20%;" placeholder="작성자"/><br>
-        <input type="text" name="title" style="width: 40%;" placeholder="제목"/>
-        <br><br>
-        <textarea id="summernote" name="content"></textarea>
-        <input id="subBtn" type="button" value="글 작성" style="float: right;" onclick="goWrite(this.form)"/>
-    </form>
-</div>
+                        <button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">
+                            Submit
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li style="display:none">
+                Should be Empty:
+                <input type="text" name="website" value="" />
+            </li>
+        </ul>
+    </div>
 
+</form>
 </body>
-</html>
+{{>layout/insert/footer}}

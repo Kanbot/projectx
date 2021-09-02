@@ -21,7 +21,8 @@ var main = {
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#content1').val()
+            content: $('#summernote').val()
+            category: $('#category').val()
         };
 
         $.ajax({
@@ -32,7 +33,7 @@ var main = {
             data: JSON.stringify(data)
         }).done(function() {
             alert('글이 등록되었습니다.');
-            window.location.href = '/posts/main';
+            window.location.href = '/posts/blog';
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });

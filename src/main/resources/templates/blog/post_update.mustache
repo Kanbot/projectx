@@ -35,6 +35,7 @@ $(document).ready(function() {
             <li class="form-line" data-type="control_textbox" id="id_15">
                 <label class="form-label form-label-top form-label-auto" id="label_15" for="input_15"> 제목 </label>
                 <div id="cid_15" class="form-input-wide" data-layout="half">
+                    <input type="hidden" id="id" name ="id" value="{{posts.id}}"/>
                     <input type="text" id="title" name="title" data-type="input-textbox" class="form-textbox" style="width:310px" size="310" value="{{posts.title}}" data-component="textbox" aria-labelledby="label_15" />
                 </div>
             </li>

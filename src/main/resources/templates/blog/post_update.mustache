@@ -1,0 +1,118 @@
+{{>layout/insert/header}}
+<body>
+<script>
+$(document).ready(function() {
+
+	  $('#summernote').summernote({
+ 	    	placeholder: 'content',
+	        minHeight: null,
+	        maxHeight: null,
+	        focus: true,
+	        lang : 'ko-KR',
+	        prettifyHtml:false
+	  });
+	});
+
+</script>
+<form class="jotform-form" >
+    <input type="hidden" name="formID" value="212438682252456" />
+    <input type="hidden" id="JWTContainer" value="" />
+    <input type="hidden" id="cardinalOrderNumber" value="" />
+    <div role="main" class="form-all">
+        <style>
+      .form-all:before { background: none;}
+    </style>
+        <ul class="form-section page-section">
+            <li id="cid_1" class="form-input-wide" data-type="control_head">
+                <div class="form-header-group  header-large">
+                    <div class="header-text httal htvam">
+                        <h1 id="header_1" class="form-header" data-component="header">
+                            글수정
+                        </h1>
+                    </div>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_textbox" id="id_15">
+                <label class="form-label form-label-top form-label-auto" id="label_15" for="input_15"> 제목 </label>
+                <div id="cid_15" class="form-input-wide" data-layout="half">
+                    <input type="text" id="title" name="title" data-type="input-textbox" class="form-textbox" style="width:310px" size="310" value="{{posts.title}}" data-component="textbox" aria-labelledby="label_15" />
+                </div>
+            </li>
+            <li class="form-line" data-type="control_textbox" id="id_17">
+                <label class="form-label form-label-top form-label-auto" id="label_17" for="input_17"> 작성자 </label>
+                <div id="cid_17" class="form-input-wide" data-layout="half">
+                    <input type="text" id="author" name="author" data-type="input-textbox" class="form-textbox"  value="{{posts.author}}" style="width:310px" size="310" data-component="textbox" aria-labelledby="label_17" readonly disabled />
+                </div>
+            </li>
+            <li class="form-line" data-type="control_dropdown" id="id_16">
+                <label class="form-label form-label-top form-label-auto" id="label_16" for="input_16"> 카테고리 </label>
+                <div id="cid_16" class="form-input-wide" data-layout="half">
+                    <select class="form-dropdown" id="category" name="category" style="width:310px" data-component="dropdown">
+                        <option value="option">{{posts.category}}</option>
+                        <option value="java"> java </option>
+                        <option value="java script"> java script </option>
+                        <option value="android"> android </option>
+                        <option value="server">server</option>
+                        <option value="direct">직접입력</option>
+                        <input type="text" id="selboxDirect" name="selboxDirect" data-type="input-textbox" class="form-textbox"  style="width:310px" size="310" value="" data-component="textbox" aria-labelledby="label_17" />
+                    </select>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_textarea" id="id_12">
+                <label class="form-label form-label-top form-label-auto" id="label_12" for="input_12"> 내용 </label>
+                <div id="cid_12" class="form-input-wide" data-layout="full">
+                    <textarea id="summernote" name="content">{{posts.content}}</textarea>
+                </div>
+            </li>
+            <li class="form-line" data-type="control_button" id="id_2">
+                <div id="cid_2" class="form-input-wide" data-layout="full">
+                    <div data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
+
+                        <button type="button" class="btn btn-primary" id="btn-update">등록</button>
+                    </div>
+                </div>
+            </li>
+            <li style="display:none">
+                Should be Empty:
+                <input type="text" name="website" value="" />
+            </li>
+        </ul>
+    </div>
+
+</form>
+
+
+<!--index.js 추가-->
+<script src="/js/app/index.js"></script>
+<script type="text/javascript">
+
+$(function(){
+
+
+$("#selboxDirect").hide();
+
+
+
+$("#category").change(function() {
+
+
+		if($("#category").val() == "direct") {
+
+			$("#selboxDirect").show();
+
+		}  else {
+
+			$("#selboxDirect").hide();
+
+		}
+
+
+
+	})
+
+});
+</script>
+<script src="/js/app/index.js"></script>
+</body>
+
+{{>layout/insert/footer}}

@@ -46,13 +46,14 @@ public class IndexController {
     }
 
     //수정 화면
+    /*
     @GetMapping("/posts/update/{id}")
     public String postUpdate(@PathVariable Long id ,Model model){
         PostsResponseDto dto =postsService.findById(id);
         model.addAttribute("post",dto);
         return "index/posts-update";
     }
-
+    */
     //블로그 이동
     @GetMapping("/posts/blog")
     public String info(Model model){
@@ -72,8 +73,15 @@ public class IndexController {
     //블로그 글쓰기 이동
     @GetMapping("/posts/insert")
     public String insert(){
-        return  "blog/insert";
+        return  "blog/post_insert";
     }
+
+    //블로그  글수정 이동
+    @GetMapping("/posts/update/{id}")
+    public String postsupdate(@PathVariable Long id ,Model model) {
+        PostsResponseDto dto =postsService.findById(id);
+        model.addAttribute("posts",dto);
+        return  "blog/post_update"; }
 
 }
 

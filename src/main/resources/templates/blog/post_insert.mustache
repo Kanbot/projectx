@@ -1,19 +1,6 @@
 {{>layout/insert/header}}
 <body>
-<script>
-$(document).ready(function() {
 
-	  $('#summernote').summernote({
- 	    	placeholder: 'content',
-	        minHeight: null,
-	        maxHeight: null,
-	        focus: true,
-	        lang : 'ko-KR',
-	        prettifyHtml:false
-	  });
-	});
-
-</script>
 <form class="jotform-form" >
     <input type="hidden" name="formID" value="212438682252456" />
     <input type="hidden" id="JWTContainer" value="" />
@@ -80,39 +67,5 @@ $(document).ready(function() {
     </div>
 
 </form>
-
-
-<!--index.js 추가-->
-<script src="/js/app/index.js"></script>
-<script type="text/javascript">
-
-$(function(){
-
-
-$("#selboxDirect").hide();
-
-
-
-$("#category").change(function() {
-
-
-		if($("#category").val() == "direct") {
-
-			$("#selboxDirect").show();
-
-		}  else {
-
-			$("#selboxDirect").hide();
-
-		}
-
-
-
-	})
-
-});
-</script>
-
-</body>
 
 {{>layout/insert/footer}}

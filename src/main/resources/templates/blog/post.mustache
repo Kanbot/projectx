@@ -1,4 +1,4 @@
-{{>layout/blog/header}}
+{{>layout/post/header}}
 <body>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
@@ -39,7 +39,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
-                {{posts.content}}
+                <textarea id="summernote" name="content">{{posts.content}}</textarea>
             </div>
         </div>
     </div>
@@ -89,4 +89,4 @@
 </footer>
 <script src="/js/app/index.js"></script>
 <!-- Bootstrap core JS-->
-{{>layout/blog/footer}}
+{{>layout/post/footer}}

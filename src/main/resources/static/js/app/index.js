@@ -18,10 +18,12 @@ var main = {
                 });
     },
     save : function () {
+        ss=$('#summernote').val().replace(/(<([^>]+)>)/ig,"");
+
         var data = {
             title: $('#title').val(),
             author: $('#author').val(),
-            content: $('#summernote').val(),
+            content: ss,
             category: $('#category').val()
 
         };
@@ -30,7 +32,7 @@ var main = {
             var data = {
                         title: $('#title').val(),
                         author: $('#author').val(),
-                        content: $('#summernote').val(),
+                        content: ss,
                         category: $('#selboxDirect').val()
 
                     };

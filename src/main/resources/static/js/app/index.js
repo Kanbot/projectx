@@ -52,8 +52,8 @@ var main = {
     update : function () {
         var data = {
             title: $('#title').val(),
-            content: $('#content').val(),
-            category: $('#category').val()
+            content: $('#content').val()
+
         };
 
         var id = $('#id').val();

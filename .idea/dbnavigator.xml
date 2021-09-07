@@ -25,30 +25,28 @@
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
     <loaded-nodes>
-      <connection connection-id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437">
+      <connection connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
         <schema name="projectx" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437">
-      <console name="Connection" type="STANDARD" schema="projectx" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from posts]]></console>
+    <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
+      <console name="Connection 1" type="STANDARD" schema="projectx" session="Main" />
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[CREATE TABLE SPRING_SESSION_ATTRIBUTES (
+	SESSION_PRIMARY_ID CHAR(36) NOT NULL,
+	ATTRIBUTE_NAME VARCHAR(200) NOT NULL,
+	ATTRIBUTE_BYTES BLOB NOT NULL,
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASECADE
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437" dataset="projectx.student_tb" active-filter-id="" />
-    <filter-actions connection-id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437" dataset="projectx.posts" active-filter-id="ad0df219-1148-433a-93e3-5787c785ce93">
-      <filter id="ad0df219-1148-433a-93e3-5787c785ce93" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="category" operator="is not null" value="" active="true" />
-      </filter>
-    </filter-actions>
+    <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -76,9 +74,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="9be2707b-5ec0-4ebe-9902-a4a3ad02f437" active="true">
+      <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" active="true">
         <database>
-          <name value="Connection" />
+          <name value="Connection 1" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
@@ -87,7 +85,7 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="database-1.c2uew4ondgdp.ap-northeast-2.rds.amazonaws.com" />
+          <host value="projectx.c2uew4ondgdp.ap-northeast-2.rds.amazonaws.com" />
           <port value="3306" />
           <database value="projectx" />
           <type value="USER_PASSWORD" />
@@ -95,7 +93,7 @@
           <deprecated-pwd value="ZXBhcHptMTI=" />
         </database>
         <properties>
-          <auto-commit value="true" />
+          <auto-commit value="false" />
         </properties>
         <ssh-settings>
           <active value="false" />

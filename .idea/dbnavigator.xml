@@ -33,13 +33,7 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
       <console name="Connection 1" type="STANDARD" schema="projectx" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[CREATE TABLE SPRING_SESSION_ATTRIBUTES (
-	SESSION_PRIMARY_ID CHAR(36) NOT NULL,
-	ATTRIBUTE_NAME VARCHAR(200) NOT NULL,
-	ATTRIBUTE_BYTES BLOB NOT NULL,
-	CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),
-	CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASCADE
-) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;]]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -47,6 +41,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" dataset="projectx.SPRING_SESSION" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -76,7 +73,7 @@
     <connections>
       <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" active="true">
         <database>
-          <name value="Connection 1" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />

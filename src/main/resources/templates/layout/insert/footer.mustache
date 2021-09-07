@@ -33,13 +33,6 @@ $("#category").change(function() {
 $(document).ready(function() {
 
 	  $('#summernote').summernote({
-      callbacks: {
-	        	onImageUpload: function(files, editor, welEditable) {
-	        		for(var i = files.length -1; i>=0; i--) {
-	        			sendFile(files[i], this);
-	        		}
-	        	}
-	        },
 	  height: 300,
     codemirror: {
       mode: 'text/html',
@@ -49,7 +42,7 @@ $(document).ready(function() {
     },
 
 	  toolbar: [
-			    // [groupName, [list of button]]
+
 			    ['fontname', ['fontname']],
 			    ['fontsize', ['fontsize']],
 			    ['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],

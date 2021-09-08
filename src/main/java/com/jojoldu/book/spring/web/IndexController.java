@@ -59,5 +59,14 @@ public class IndexController {
         model.addAttribute("posts",dto);
         return  "blog/post_update"; }
 
+    //테이블 이동
+    @GetMapping("/posts/table")
+    public String  table(Model model){
+
+        model.addAttribute("posts",postsService.findAllDesc());
+        return  "table/table";
+
+    }
+
 }
 

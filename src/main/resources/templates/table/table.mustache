@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Tables - SB Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+    <link href="/js/app/css/styles-table.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+
+
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Tables {{posts.count}}</h1>
+
+                    <table id="datatablesSimple">
+
+                        <tbody>
+                        {{#posts}}
+                        <tr>
+                            <td>{{id}}</td>
+                            <td>{{title}}</td>
+                            <td>{{author}}</td>
+                            <td>{{category}}</td>
+                            <td> {{modifiedDate}}</td>
+
+                        </tr>
+                            <tr>
+                        <div class="container px-4 px-lg-5">
+                            <div class="row gx-4 gx-lg-5 justify-content-center">
+                                <div class="col-md-10 col-lg-8 col-xl-7">
+                                    <!-- Post preview-->
+                                    <div class="post-preview">
+                                        <a href="/posts/posts/{{id}}">
+
+                                            <td> <h2 class="post-title">{{id}}. {{title}}</h2></td>
+                                            <td><h3 class="post-subtitle">{{category}}</h3></td>
+                                        </a>
+                                        <p class="post-meta">
+                                            Posted by
+                                        <td>  {{author}}</td>
+                                        <td>  {{modifiedDate}}</td>
+                                        </p>
+                                    </div>
+                                    <!-- Divider-->
+                                    <hr class="my-4" />
+
+                                </div>
+                            </div>
+                        </div>
+                            </tr>
+                        {{/posts}}
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="/js/app/js/datatables.js"></script>
+</body>
+</html>

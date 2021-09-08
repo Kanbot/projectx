@@ -14,4 +14,5 @@ public interface PostsRepository extends JpaRepository<Posts,Long> {
     @Modifying
     @Query("UPDATE Posts x set content = content || '경고! 내용을 수정하시기 바랍니다.' where id =x.id")
     void revise(Long id);
+
 }

@@ -53,10 +53,20 @@ var main = {
     update : function () {
         var data = {
             title: $('#title').val(),
-            content: $('#content').val(),
+            content: $('#summernote').val(),
             category: $('#category').val()
 
         };
+        if($('#category').val() == "direct"){
+
+                    var data = {
+                                title: $('#title').val(),
+                                content: $('#summernote').val(),
+                                category: $('#selboxDirect').val()
+
+                            };
+
+                }
 
         var id = $('#id').val();
 
@@ -73,18 +83,6 @@ var main = {
             alert(JSON.stringify(error));
         });
     },
-
-     email : function () {
-
-            $.ajax({
-
-            }).done(function() {
-                alert('이메일이 전송되었습니다');
-                window.location.href = '/';
-            }).fail(function (error) {
-                alert(JSON.stringify(error));
-            });
-        },
 
     delete : function () {
         var id = $('#id').val();

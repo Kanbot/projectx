@@ -23,37 +23,13 @@ public class IndexController {
         return "home";
     }
 
-    //인덱스 화면
-    @GetMapping("/posts/main")
-    public String main(Model model ,@LoginUser SessionUser user){
-        model.addAttribute("posts",postsService.findAllDesc());
-        if(user != null){
-            model.addAttribute("user",user.getName());
-        }
-        return "index/index";
-    }
-
     //경고 화면
     @GetMapping("/api/v1/posts/revise/{id}")
     public String revise(@PathVariable Long id ){
         postsService.revise(id);
         return "index/index";
     }
-    //저장 화면
-    @GetMapping("/posts/save")
-    public String postsSave(){
-        return "index/posts-save";
-    }
 
-    //수정 화면
-    /*
-    @GetMapping("/posts/update/{id}")
-    public String postUpdate(@PathVariable Long id ,Model model){
-        PostsResponseDto dto =postsService.findById(id);
-        model.addAttribute("post",dto);
-        return "index/posts-update";
-    }
-    */
     //블로그 이동
     @GetMapping("/posts/blog")
     public String info(Model model){

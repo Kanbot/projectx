@@ -1,19 +1,6 @@
 {{>layout/insert/header}}
 <body>
-<script>
-$(document).ready(function() {
 
-	  $('#summernote').summernote({
- 	    	placeholder: 'content',
-	        minHeight: null,
-	        maxHeight: null,
-	        focus: true,
-	        lang : 'ko-KR',
-	        prettifyHtml:false
-	  });
-	});
-
-</script>
 <form class="jotform-form" >
     <input type="hidden" name="formID" value="212438682252456" />
     <input type="hidden" id="JWTContainer" value="" />
@@ -35,7 +22,7 @@ $(document).ready(function() {
             <li class="form-line" data-type="control_textbox" id="id_15">
                 <label class="form-label form-label-top form-label-auto" id="label_15" for="input_15"> 제목 </label>
                 <div id="cid_15" class="form-input-wide" data-layout="half">
-                    <input type="hidden" id="id" name ="id" value="{{posts.id}}"/>
+                    <input type="hidden" id="id" name ="id" value="{{posts.id}}" readonly/>
                     <input type="text" id="title" name="title" data-type="input-textbox" class="form-textbox" style="width:310px" size="310" value="{{posts.title}}" data-component="textbox" aria-labelledby="label_15" />
                 </div>
             </li>
@@ -70,7 +57,11 @@ $(document).ready(function() {
                     <div data-align="left" class="form-buttons-wrapper form-buttons-left   jsTest-button-wrapperField">
 
                         <button type="button" class="btn btn-primary" id="btn-update">등록</button>
+                        <td style="padding-left:100px">
+                        <button type="button" class="btn btn-primary" style="margin-left: 30px;"   onclick="location.href='/posts/blog'">취소</button>
+                        </td>
                     </div>
+
                 </div>
             </li>
             <li style="display:none">
@@ -82,38 +73,5 @@ $(document).ready(function() {
 
 </form>
 
-
-<!--index.js 추가-->
-<script src="/js/app/index.js"></script>
-<script type="text/javascript">
-
-$(function(){
-
-
-$("#selboxDirect").hide();
-
-
-
-$("#category").change(function() {
-
-
-		if($("#category").val() == "direct") {
-
-			$("#selboxDirect").show();
-
-		}  else {
-
-			$("#selboxDirect").hide();
-
-		}
-
-
-
-	})
-
-});
-</script>
-<script src="/js/app/index.js"></script>
-</body>
 
 {{>layout/insert/footer}}

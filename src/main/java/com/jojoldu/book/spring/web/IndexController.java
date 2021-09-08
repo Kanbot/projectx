@@ -48,7 +48,10 @@ public class IndexController {
 
     //블로그 글쓰기 이동
     @GetMapping("/posts/insert")
-    public String insert(){
+    public String insert(@LoginUser SessionUser user ,Model model){
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return  "blog/post_insert";
     }
 

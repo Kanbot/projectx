@@ -71,5 +71,11 @@ public class IndexController {
 
     }
 
+    //배포환경 이동
+    @GetMapping("/posts/dev")
+    public String  dev(){
+        return  "dev/dev";
+    }
+
 }
 

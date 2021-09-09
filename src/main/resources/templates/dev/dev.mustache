@@ -1,10 +1,36 @@
 {{>layout/dev/header}}
+
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="/">KANBOT</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="/posts/dev">Home</a></li>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('/js/app/assets/img/header-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>배포 환경</h1>
+                    <span class="subheading">Hosting environment</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <section class="page-section bg-light" id="portfolio">
     <div class="container">
-        <div class="text-center">
-            <h2 class="section-heading text-uppercase">배포 환경</h2>
-            <h3 class="section-subheading text-muted">Hosting environment</h3>
-        </div>
         <div class="row">
 
             <!-- 외부 div 24 시작 -->
@@ -90,7 +116,10 @@
                         </div>
                         <img class="img-fluid" src="/js/app/assets/dev/github.jpg" alt="..." />
                     </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">깃허브</div>
 
+                    </div>
                 </div>
             </div>
 
@@ -109,7 +138,10 @@
                         </div>
                         <img class="img-fluid" src="/js/app/assets/dev/tr.jpg" alt="..." />
                     </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Travis CI</div>
 
+                    </div>
                 </div>
             </div>
 
@@ -131,7 +163,10 @@
                         </div>
                         <img class="img-fluid" src="/js/app/assets/dev/code.jpg" alt="..." />
                     </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Code Deploy</div>
 
+                    </div>
                 </div>
             </div>
 
@@ -155,7 +190,10 @@
                         </div>
                         <img class="img-fluid" src="/js/app/assets/dev/ec2.jpg" alt="..." />
                     </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Amazon EC2</div>
 
+                    </div>
                 </div>
             </div>
 
@@ -174,7 +212,10 @@
                         </div>
                         <img class="img-fluid" src="/js/app/assets/dev/sp.jpg" alt="..." />
                     </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Spring Boot</div>
 
+                    </div>
                 </div>
             </div>
 
@@ -225,9 +266,15 @@
                 </div>
             </div>
 
-            <div class="col-lg-7 col-sm-6 mb-4">
+            <div class="col-lg-1 col-sm-6 mb-4">
+            </div>
+
+            <div class="col-lg-4 col-sm-6 mb-4" style="padding-bottom:  20px" >
                 <!-- Portfolio item 4-->
 
+                <img src="/js/app/assets/dev/side.JPG" style="width: 165px" alt="..." />
+            </div>
+            <div class="col-lg-2 col-sm-6 mb-4">
             </div>
         </div>
     </div>

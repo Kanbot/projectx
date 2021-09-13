@@ -24,12 +24,16 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
+        <schema name="projectx" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
       <console name="Connection 1" type="STANDARD" schema="projectx" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from user]]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select content from posts where id=14;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

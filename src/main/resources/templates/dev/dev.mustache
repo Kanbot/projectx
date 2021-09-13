@@ -224,59 +224,46 @@
 
     </div>
     </center>
-
+    <div class="row">   <div class="col-lg-4"></div>
+        <div class="col-lg-28">개발자가 개발툴에서 프로젝트를 깃허브로 푸쉬를 하면 깃허브는 프로젝트를 저장하고 깃허브와 연결된 Travis CI가 자동으로테스트 와 배포 파일을 생성해 S3로 jar 파일을 전송한다. <br>그리고 Travis CI가 CodeDeploy로 배포 요청을 보내면 CodeDeploy는 S3에서 jar 파일을 받아와서 EC2 호스팅 서버에 자동 배포를 진행 한다.<br>사용자가 EC2인스턴트 내부에 요청을 보내면 Nginx가 리버스 프록시를 해 요청한 스프링 부트로 요청을 전달 한다.<br>그러면 요청을 받은 포트가 서버에 스프링 부트를 배포한다. </div>
+        <div class="col-lg-4"></div>
+    </div>
 
 
 
 </section>
-
-
-
+<!-- 개발자 시작 -->
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">개발 언어</h2>
-                            <p class="item-intro text-muted">Programming Language</p>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/java1.jpg" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">자바 </p>
-                                            </strong></center>
-                                    </span>
+                    <center> <div>
 
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">개발자</h2>
+                        <p class="item-intro text-muted">Git Push</p>
+                        <div><div style="width: 1000px">
 
-
-                                </div>
-
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/js.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 35px;">자바<br>스크립트</p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/sql.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 50px;">SQL </p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                            </div>
+                            <p><b>개발자 깃 푸쉬</b></p><p>개발자가 개발툴로 깃 사이트에 연결 후 푸쉬로 업데이트를 해준다.</p><p>나의 경우 Intellij IDEA를 이용해 개발을 했음으로 Intellj에 깃허브를 연결해 푸쉬를해준다.</p>
+                            <p><b>1. 나의경우 윈도우 환경이므로 Ctrl + K 키를&nbsp; 눌러 푸쉬 할 커밋을 만들어준다.</b></p><p>
+                            <img src="/js/app/assert/dev/dev1.JPG" class="img-fluid" />
+                        </p>
+                            <p>
+                                <b>2. 그다음 Ctrl + Shift + K 를 눌러 깃 허브에 푸쉬를 해준다.</b>
+                            </p>
+                            <p>
+                                <img src="/js/app/assert/dev/dev2.JPG" class="img-fluid" />
+                            </p>
+                            ※ 푸쉬 할 시 브런치를 지정해 푸쉬를 할 수 있다. 백업용 브런치를 만들어 두면 더욱 편리한 개발이 가능하다.
+                            <p>
+                                <b>3. 깃허브에 푸쉬가 완료되었다.</b>
+                            </p>
+                            <p>
+                                <img src="/js/app/assert/dev/dev3.JPG" class="img-fluid" />
+                            </p>
+                        </div>
 
 
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
@@ -284,283 +271,350 @@
                                 Close Project
                             </button>
                         </div>
+
+
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Portfolio item 2 modal popup-->
+<!-- 개발자 끝 -->
+<!-- 깃허브 시작-->
 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">프레임 워크</h2>
-                            <p class="item-intro text-muted">FrameWork</p>
-                            <div class="row text-center">
-                                <div class="col-md-6">
-                                    <span>
-                                        <img src="/js/app/assets/img/spring.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">스프링 </p>
-                                            </strong></center>
-                                    </span>
+                    <center> <div>
+
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">깃허브</h2>
+                        <p class="item-intro text-muted">푸쉬된 프로젝트 저장 및 코드 버젼 관리</p>
+                        <div><div style="width: 1000px">
+
+                            <p><b>깃 허브</b></p><p>분산 버전 관리 툴인 깃 저장소 호스팅을 지원하는 웹 서비스로 개발자가 푸쉬한 프로젝트가 저장된다.</p><p>다양한 깃 서비스 사이트가 있지만 가장 유명한 깃허브를 이용했다.</p>
+                            <p><b>Intellij 에서 푸쉬한 프로젝트가 정상적으로 깃허브에 업데이트 된다.</b></p>
+                            <p>
+                                <img src="app/dev3.JPG" class="img-fluid" />
+                            </p>
+                            ※ GitHub 주소 - <a href="https://github.com/Kanbot">https://github.com/Kanbot</a>
+                            <br>
+                            <br>
+
+                        </div>
 
 
-
-                                </div>
-
-                                <div class="col-md-6">
-                                    <span>
-                                        <img src="/js/app/assets/img/and.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 50px;">안드로이드</p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                            </div>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-times me-1"></i>
                                 Close Project
                             </button>
                         </div>
+
+
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Portfolio item 3 modal popup-->
+<!-- 깃허브 끝 -->
+<!-- Travis 시작 -->
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">데이터베이스</h2>
-                            <p class="item-intro text-muted">Database</p>
-                            <div class="row text-center">
-                                <div class="col-md-6">
-                                    <span>
-                                        <img src="/js/app/assets/img/oracle.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">오라클 DB </p>
-                                            </strong></center>
+                    <center> <div>
+
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">Travis CI</h2>
+                        <p class="item-intro text-muted"> 깃으로 부터 프로젝트를 받아 테스트 및 배포 파일 생성</p>
+                        <div><div style="width: 1000px">
+
+                            <p><b>Travis CI</b></p><p>Travis CI는 호스팅 지속적 통합 서비스의 하나로, 깃허브에 호스팅되는 소프트웨어 프로젝트의 <br> 빌드, 테스트를 위해 사용된다</p><p>깃허브 계정과 연동하면 자동으로 깃허브의 푸쉬된 프로젝트의 테스트와 빌드가 진행되며 <br>지속적인 배포를 서비스 해준다.</p>
+                            <p>
+                                ※  <b>CI</b> , <b>CD</b> 란 코드 버젼 관리를 하는 VCS 시스템(Git등)에 푸쉬가 되면 자동으로 테스트와 빌드가 수행되어 안정적인 배포 파일을 만드는 과정을 <b>CI</b>(Continuous Integration - 지속적인 통합) 라고 하며, 이 빌드결과를 자동으로 운영 서버에 무중단 배포까지 진행되는 과정을 <b>CD</b>(Continuous Deployment -지속적인 배포)라고 한다.
+                            </p>
+                            <p><b>1. Travis CI 사이트에서 깃허브 계정으로 로그인 한다.</b></p><p>
+                            <img src="app/tr0.JPG" class="img-fluid" />
+                        </p>
+                            <p>
+                                <b>2. 오른쪽 상단의 자신의 계정옆 버튼을 눌러 설정으로 들어간다. </b>
+                            </p>
+                            <p>
+                                <img src="app/tr1.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>3. 자신의 리포지터리에서 프로젝트를 검색해 찾는다. </b>
+                            </p>
+                            <p>
+                                <img src="app/tr2.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>4. Travis CI 에서 깃으로 푸쉬될 때 마다 자동으로 테스트 및 배포 파일을 생성해준다. </b>
+                            </p>
+                            <p>
+                                <img src="app/tr3.JPG" class="img-fluid" />
+                            </p>
+                        </div>
 
 
-                                    </span>
-
-
-
-                                </div>
-
-                                <div class="col-md-6">
-                                    <span>
-                                        <img src="/js/app/assets/img/mysql.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 50px;">Mysql</p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                            </div>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-times me-1"></i>
                                 Close Project
                             </button>
                         </div>
+
+
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Portfolio item 4 modal popup-->
+<!-- Travis 끝 -->
+<!-- s3 시작 -->
 <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">배포환경</h2>
-                            <p class="item-intro text-muted">Hosting environment</p>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/ec2.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">AWS-EC2</p>
-                                            </strong></center>
-                                    </span>
+                    <center> <div>
+
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">S3</h2>
+                        <p class="item-intro text-muted">Travis CI가 빌드한 jar 파일 받아 저장</p>
+                        <div><div style="width: 1000px">
+
+                            <p><b>Amazon S3</b></p><p>아마존 웹 서비스에서 제공하는 온라인 스토리지 웹 서비스이다</p><p>jar파일을 CodeDeploy 에게 전달하기 위한 일종의 파일 저장소이다</p>
+                            <p>S3를 이용하는 이유는 CodeDeploy에는 저장 기능이 없기 떄문에 Travis 에서 빌드한<br> jar를 CodeDeploy가 가져갈수 있게 보관할 공간이 필요하기 때문이다.</p>
+                            <p>※ 서비스이름이 S3인 이유는 Simple Stroage Service 의 S 가 3개인것을 줄여서 S3 이라고 한다.
+                            </p>
+                            <p><b>1. asw서비스 창에서 S3를 검색해 들어간다. 그다음 오른쪽의 버킷만들기 버튼을 클릭한다.</b></p><p>
+                            <img src="app/s30.JPG" class="img-fluid" />
+                        </p>
+                            <p>
+                                <b>2. 버킷의 이름을 정해주고 퍼블릭 엑세스는 모두 차단해준다. 나머지 설정은 디폴트값을 사용한다.</b>
+                            </p>
+                            <p>
+                                <img src="app/s31.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>3. 버킷이 생성되었다.</b>
+                            </p>
+                            <p>
+                                <img src="app/s32.JPG" class="img-fluid" />
+                            </p>
+
+                        </div>
 
 
-
-                                </div>
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/rds.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">AWS-RDS</p>
-                                            </strong></center>
-                                    </span>
-
-
-
-                                </div>
-
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/s3.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 50px;">AWS-S3</p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/code.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 30px;">AWS-CodeDeploy</p>
-                                            </strong></center>
-                                    </span>
-
-
-
-                                </div>
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/GitHub.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">Github</p>
-                                            </strong></center>
-                                    </span>
-
-
-
-                                </div>
-
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/travis.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 50px;">Travis-CI</p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                            </div>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-times me-1"></i>
                                 Close Project
                             </button>
                         </div>
+
+
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Portfolio item 5 modal popup-->
+<!-- s3 끝 -->
+<!-- deploy 시작 -->
 <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">깃허브</h2>
-                            <p class="item-intro text-muted">Github</p>
-                            <img class="img-fluid d-block mx-auto" src="/js/app/assets/img/portfolio/5.jpg" alt="..." />
-                            <a href=https://github.com/Kanbot>https://github.com/Kanbot</a><br><br><br>
+                    <center> <div>
+
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">CodeDeploy</h2>
+                        <p class="item-intro text-muted">S3로부터 jar 파일을 받아서 EC2호스팅 서버에 자동으로 배포</p>
+                        <div><div style="width: 1000px">
+
+                            <p><b>CodeDeploy</b></p><p>다양한 컴퓨팅 서비스에 대한 소프트웨어 배포를 자동화하는 완전관리형 배포 서비스</p><p>S3로 받은 jar 파일을 EC2 호스팅 서버에 자동으로 배포 해주는 서비스이다.개발자가 직접 스크립트를 실행 시켜 배포할 수고를 줄여줘 개발을 더욱더 편한 환경에서 할 수 있도록 도와준다.</p>
+                            <p>
+                                ※ AWS 배포 삼형제로 하나로 나머지로 Code Commit, Code Build가 있지만 잘 쓰이지 않거나 대체제가 있지만 CodeDeploy 만은 대체제가 마땅히 없어 주로 사용되고 있다.
+                            </p>
+                            <p><b>1. AWS 서비스 창에서 codedeploy 를 검색해 들어가 화면중앙의 애플리케이션 생성을 클릭한다.</b></p><p>
+                            <img src="app/de2.JPG" class="img-fluid" />
+                        </p>
+                            <p>
+                                <b>2. 애플리케이션 이름을 입력하고 애플리케이션을 생성해준다.</b>
+                            </p>
+                            <p>
+                                <img src="app/de3.JPG" class="img-fluid" />
+                            </p>
+
+                            <p>
+                                <b>3. 생성된 애플리케이션을 클릭해 들어간 다음 배포 그룹 생성 버튼을 눌러준다. </b>
+                            </p>
+                            <p>
+                                <img src="app/de6.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>4. 설정대로 입력해준후 로드밸런서는 체크를 해제해준다.프리티어인 본 사이트는 서버가 1대라 사용할 필요가 없다.   </b>
+                            </p>
+                            <p>
+                                <img src="app/de5.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>5. 애플리케이션과 배포그룹이 잘 생성되었다.   </b>
+                            </p>
+                            <p>
+                                <img src="app/de7.JPG" class="img-fluid" />
+                            </p>
+                        </div>
+
+
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-times me-1"></i>
                                 Close Project
                             </button>
                         </div>
+
+
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Portfolio item 6 modal popup-->
+<!-- deploy 끝 -->
+<!-- ec2 시작-->
 <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <div class="modal-body">
-                            <!-- Project details-->
-                            <h2 class="text-uppercase">개발 툴</h2>
-                            <p class="item-intro text-muted">Programming Tool</p>
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/intell.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 50px;">Intellij community</p>
-                                            </strong></center>
-                                    </span>
+                    <center> <div>
+
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">EC2</h2>
+                        <p class="item-intro text-muted">CodeDeploy로부터 배포받은 파일로 애플리케이션을 서버에 호스팅 해준다.</p>
+                        <div><div style="width: 1000px">
+
+                            <p><b>EC2</b></p><p>아마존 일래스틱 컴퓨트 클라우드는 사용자가 가상 컴퓨터를 임대 받아 그 위에 자신만의 컴퓨터 애플리케이션들을 실행할 수 있게 한다</p><p>서버에 자신의 애플리케이션을 실행할 수 있게해주는 호스팅 서버</p>
+                            <p>※ EC2는 Elastic Computing Cloud 로 약자로 Computing Cloud 의 C 두개를 C2로 표현해 EC2가 되었다.</p>
+                            <p><b>1. AWS 서비스 창에 EC2를 검색해 인스턴스 생성 버튼을 누른다.</b></p><p>
+                            <img src="app/e1.JPG" class="img-fluid" />
+                        </p>
+                            <p>
+                                <b>2. 프리티어로 사용가능한 아마존 리눅스2을 선택한다.</b>
+                            </p>
+                            <p>
+                                <img src="app/e2.JPG" class="img-fluid" />
+                            </p>
+
+                            <p>
+                                <b>3. 프리티어로 사용가능한 t2.micro 유형으로 선택한다.</b>
+                            </p>
+                            <p>
+                                <img src="app/e3.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>4. 기본설정들을 입력하고 인스턴스로 접근하기 위한 pem키를 다운받아 관리가 잘되는 폴더에 잘 보관한다.</b>
+                            </p>
+                            <p>
+                                <img src="app/e4.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>5. 나머지 설정들을 입력하면 인스턴스가 생성 된다.</b>
+                            </p>
+                            <p>
+                                <img src="app/e5.JPG" class="img-fluid" />
+                            </p>
+                        </div>
 
 
-
-                                </div>
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/eclipse.jpg" width="225px" height="225px" />
-                                        <center><strong>
-                                                <p style="font-size: 35px;">Eclipse</p>
-                                            </strong></center>
-                                    </span>
-
-
-
-                                </div>
-
-                                <div class="col-md-4">
-                                    <span>
-                                        <img src="/js/app/assets/img/android.jpg" width="225px" height="225px" />
-                                        <strong>
-                                            <p style="font-size: 35px;">Android Studio</p>
-                                        </strong>
-                                    </span>
-
-
-                                </div>
-                            </div>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-times me-1"></i>
                                 Close Project
                             </button>
                         </div>
+
+
                     </div>
+                    </center>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- ec2 끝 -->
+<!-- nginx 시작 -->
+<div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="close-modal" data-bs-dismiss="modal"><img src="app/close-icon.svg" alt="Close modal" /></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <center> <div>
+
+                        <!-- Project details-->
+                        <h2 class="text-uppercase">Nginx</h2>
+                        <p class="item-intro text-muted">외부사용자의 요청을 받아 8081 혹은 8082 포트로 리버스 프록시를 해준다.</p>
+                        <div><div style="width: 1000px">
+
+                            <p><b>Nginx</b></p><p>웹 서버, 리버스 프록시 및 메일 프록시등을 지원하는 오픈소스 소프트웨어</p>
+                            <p>리버스 프록시란 엔진엑스가 외부의 요청을 받아 백앤드 서버로 요청을 전달하는 행위를 말한다. 엔진엑스는 요청만 전달하고 처리는 백엔드 서버들이 처리를 한다. 무중단 배포를 가능하게 해주는 소프트웨어</p>
+                            <p><b>1. putty 나 vm player 를 이용해 EC2에 접속한다.</b></p><p>
+                            <img src="app/n1.JPG" class="img-fluid" />
+                        </p>
+                            <p>
+                                <b>2. 리눅스창에 sudo yum install nginx <br> sudo service nginx start 를 쳐서 nginx를 다운받고 실행해준다</b>
+                            </p>
+                            <p>
+                                <img src="app/n2.JPG" class="img-fluid" />
+                            </p>
+
+                            <p>
+                                <b>3. sudo vim /etc/nginx/nginx.conf 를치고 server 아래의 location / 부분을 찾아 다음의 설정을 입력한다.</b>
+                            </p>
+                            <p>
+                                <img src="app/n3.JPG" class="img-fluid" />
+                            </p>
+                            <p>
+                                <b>4. 8080포트를 향한 외부의 요청을 리버스 프록시해서 :8080 없이도 사이트에 연결 해준다.</b>
+                            </p>
+                            <p>
+                                <img src="app/n4.JPG" class="img-fluid" />
+                            </p>
+                        </div>
+
+
+                            <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                <i class="fas fa-times me-1"></i>
+                                Close Project
+                            </button>
+                        </div>
+
+
+                    </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- nginx 끝 -->
+
+
+
 <!-- Bootstrap core JS-->
 {{>layout/dev/footer}}

@@ -26,6 +26,18 @@ var main = {
             category: $('#category').val()
 
         };
+         if($('#title').val() == ""){
+                        alert("제목을 입력해주세요");
+                        return;
+                        }
+        if($('#category').val() == "Please Select"){
+                alert("카테고리를 선택해주세요");
+                return;
+                }
+           if($('#summernote').val() == ""){
+                                alert("내용을 입력해주세요");
+                                return;
+                                }
         if($('#category').val() == "direct"){
 
             var data = {
@@ -57,6 +69,14 @@ var main = {
             category: $('#category').val()
 
         };
+         if($('#category').val() == "Please Select"){
+                        alert("카테고리를 선택해주세요");
+                        return;
+                        }
+                   if($('#summernote').val() == ""){
+                                        alert("내용을 입력해주세요");
+                                        return;
+                                        }
         if($('#category').val() == "direct"){
 
                     var data = {
@@ -86,6 +106,7 @@ var main = {
 
     delete : function () {
         var id = $('#id').val();
+        if (confirm("정말 삭제하시겠습니까??") == true){    //확인
 
         $.ajax({
             type: 'DELETE',
@@ -98,6 +119,9 @@ var main = {
         }).fail(function (error) {
             alert(JSON.stringify(error));
         });
+        }else{
+        return;
+        }
     },
 
 

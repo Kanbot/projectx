@@ -53,6 +53,13 @@ public class PostsService {
 
         return new PostsResponseDto(entity);
     }
+    @Transactional(readOnly = true)
+    public PostsResponseDto findByTitle(String title){
+
+            Posts posts = (Posts) postsRepository.findTitle(title);
+        return new PostsResponseDto(posts);
+
+    }
 
     @Transactional(readOnly = true)
     public List<PostsListResponseDto> findAllDesc() {

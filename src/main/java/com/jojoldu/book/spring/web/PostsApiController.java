@@ -35,6 +35,8 @@ public class PostsApiController {
         return postsService.findById(id);
     }
 
+    @GetMapping("/api/v1/posts/{title}")
+    public PostsResponseDto findByTitle(@PathVariable String title){return postsService.findByTitle(title);}
     @GetMapping("/api/v1/posts/list")
     public List<PostsListResponseDto> findAll() {
         return postsService.findAllDesc();

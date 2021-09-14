@@ -77,5 +77,12 @@ public class IndexController {
         return  "dev/dev";
     }
 
+    //검색 결과창 이동
+    @GetMapping("/posts/search/{title}")
+    public String search(@PathVariable String title , Model model){
+        PostsResponseDto dto =postsService.findByTitle(title);
+        return "blog/posts_search";
+    }
+
 }
 

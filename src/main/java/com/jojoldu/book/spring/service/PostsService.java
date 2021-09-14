@@ -54,10 +54,8 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
     @Transactional(readOnly = true)
-    public PostsResponseDto findByTitle(String title){
-
-            Posts posts = (Posts) postsRepository.findTitle(title);
-        return new PostsResponseDto(posts);
+    public List<PostsResponseDto> search(String search){
+        return postsRepository.search(search).stream().map(PostsResponseDto::new).collect(Collectors.toList());
 
     }
 

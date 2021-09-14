@@ -14,7 +14,7 @@ public interface PostsRepository extends JpaRepository<Posts,Long> {
     @Modifying
     @Query("UPDATE Posts x set content = content || '경고! 내용을 수정하시기 바랍니다.' where id =x.id")
     void revise(Long id);
-    @Query("SELECT x FROM Posts x where title =x.title")
-    List<Posts> findTitle(String title);
+    @Query(value = "select  * from Posts where title = %?1% or content =%?1% or author = %?1%", nativeQuery = true)
+    List<Posts> search(String search);
 
 }

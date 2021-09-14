@@ -41,10 +41,22 @@ public class IndexController {
     //블로그 포스트 이동
     @GetMapping("/posts/posts/{id}")
     public String post(@PathVariable Long id, Model model){
-        PostsResponseDto dto  =postsService.findById(id);
-        model.addAttribute("posts",dto);
+
+        model.addAttribute("posts",postsService.findById(id));
 
         return  "blog/post";}
+
+    //검색 결과창 이동
+    @GetMapping("/posts/search/{search}")
+    public String search(@PathVariable String search, Model model){
+        model.addAttribute("posts",postsService.search(search));
+        return "blog/post_search";
+    }
+    //검색 결과창 이동
+    @GetMapping("/posts/search")
+    public String search1(){
+        return  "blog/post_search";
+    }
 
     //블로그 글쓰기 이동
     @GetMapping("/posts/insert")
@@ -77,12 +89,7 @@ public class IndexController {
         return  "dev/dev";
     }
 
-    //검색 결과창 이동
-    @GetMapping("/posts/search/{title}")
-    public String search(@PathVariable String title , Model model){
-        PostsResponseDto dto =postsService.findByTitle(title);
-        return "blog/posts_search";
-    }
+
 
 }
 

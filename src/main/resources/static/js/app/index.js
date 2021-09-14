@@ -13,55 +13,55 @@ var main = {
             _this.delete();
         });
 
-        $('#btn-email').on('click', function () {
-                    _this.email();
+        $('#btn-search').on('click', function () {
+                    _this.search();
                 });
     },
-    save : function () {
-
-        var data = {
-            title: $('#title').val(),
-            author: $('#author').val(),
-            content: $('#summernote').val(),
-            category: $('#category').val()
-
-        };
-         if($('#title').val() == ""){
-                        alert("제목을 입력해주세요");
-                        return;
-                        }
-        if($('#category').val() == "Please Select"){
-                alert("카테고리를 선택해주세요");
-                return;
-                }
-           if($('#summernote').val() == ""){
-                                alert("내용을 입력해주세요");
-                                return;
-                                }
-        if($('#category').val() == "direct"){
+     save : function () {
 
             var data = {
-                        title: $('#title').val(),
-                        author: $('#author').val(),
-                        content: $('#summernote').val(),
-                        category: $('#selboxDirect').val()
+                title: $('#title').val(),
+                author: $('#author').val(),
+                content: $('#summernote').val(),
+                category: $('#category').val()
 
-                    };
+            };
+             if($('#title').val() == ""){
+                            alert("제목을 입력해주세요");
+                            return;
+                            }
+            if($('#category').val() == "Please Select"){
+                    alert("카테고리를 선택해주세요");
+                    return;
+                    }
+               if($('#summernote').val() == ""){
+                                    alert("내용을 입력해주세요");
+                                    return;
+                                    }
+            if($('#category').val() == "direct"){
 
-        }
-        $.ajax({
-            type: 'POST',
-            url: '/api/v1/posts',
-            dataType: 'json',
-            contentType:'application/json; charset=utf-8',
-            data: JSON.stringify(data)
-        }).done(function() {
-            alert('글이 등록되었습니다.');
-            window.location.href = '/posts/blog';
-        }).fail(function (error) {
-            alert(JSON.stringify(error));
-        });
-    },
+                var data = {
+                            title: $('#title').val(),
+                            author: $('#author').val(),
+                            content: $('#summernote').val(),
+                            category: $('#selboxDirect').val()
+
+                        };
+
+            }
+            $.ajax({
+                type: 'POST',
+                url: '/api/v1/posts',
+                dataType: 'json',
+                contentType:'application/json; charset=utf-8',
+                data: JSON.stringify(data)
+            }).done(function() {
+                alert('글이 등록되었습니다.');
+                window.location.href = '/posts/blog';
+            }).fail(function (error) {
+                alert(JSON.stringify(error));
+            });
+        },
     update : function () {
         var data = {
             title: $('#title').val(),
@@ -123,6 +123,30 @@ var main = {
         return;
         }
     },
+     search :function () {
+
+               var data = {
+                search: $('#search').val()
+               };
+
+             if($('#search').val() == ""){
+                            alert("검색어를 입력해주세요");
+                            return;
+                            }
+
+            $.ajax({
+                type: 'Post',
+                url: '/posts/search/'+search,
+                dataType: 'json',
+                contentType:'application/json; charset=utf-8',
+                data: JSON.stringify(data)
+            }).done(function() {
+                alert("검색");
+                window.location.href = '/posts/search';
+            }).fail(function (error) {
+                alert(JSON.stringify(error));
+            });
+        },
 
 
 };

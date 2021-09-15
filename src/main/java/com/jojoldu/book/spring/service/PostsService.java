@@ -66,9 +66,8 @@ public class PostsService {
                 .collect(Collectors.toList());
     }
     @Transactional(readOnly = true)
-    public List<PostsnewListDto> findDesc(){
-        return postsRepository.findAll().stream()
-                .map(PostsnewListDto::new).collect(Collectors.toList());
+    public List<PostsnewListDto> findCategory(String category){
+        return postsRepository.findAll(category).stream().map(PostsnewListDto::new).collect(Collectors.toList());
     }
 
 

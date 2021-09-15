@@ -7,8 +7,7 @@ import com.jojoldu.book.spring.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 
@@ -19,7 +18,10 @@ public class IndexController {
 
     //메인 화면
     @GetMapping("/")
-    public String index( ) {
+    public String index(@LoginUser SessionUser user ,Model model) {
+        if (user != null) {
+            model.addAttribute("name", user.getName());
+        }
         return "home";
     }
 
@@ -32,31 +34,25 @@ public class IndexController {
 
     //블로그 이동
     @GetMapping("/posts/blog")
-    public String info(Model model){
+    public String info(Model model ,@LoginUser SessionUser user){
         model.addAttribute("posts",postsService.findAllDesc());
-
+        model.addAttribute("name",user);
         return "blog/blog";
+    }
+    @GetMapping("/posts/dodo")
+    public  String  dodo1 (String search ,Model model){
+        model.addAttribute("posts",postsService.search(search));
+        return "blog/search";
     }
 
     //블로그 포스트 이동
     @GetMapping("/posts/posts/{id}")
-    public String post(@PathVariable Long id, Model model){
+    public String post(@PathVariable Long id, Model model,@LoginUser SessionUser user){
 
         model.addAttribute("posts",postsService.findById(id));
-
+        model.addAttribute("name",user);
         return  "blog/post";}
 
-    //검색 결과창 이동
-    @GetMapping("/posts/search/{search}")
-    public String search(@PathVariable String search, Model model){
-        model.addAttribute("posts",postsService.search(search));
-        return "blog/post_search";
-    }
-    //검색 결과창 이동
-    @GetMapping("/posts/search")
-    public String search1(){
-        return  "blog/post_search";
-    }
 
     //블로그 글쓰기 이동
     @GetMapping("/posts/insert")
@@ -85,8 +81,24 @@ public class IndexController {
 
     //배포환경 이동
     @GetMapping("/posts/dev")
-    public String  dev(){
+    public String  dev(@LoginUser SessionUser user,Model model){
+        model.addAttribute("name",user);
         return  "dev/dev";
+    }
+
+    //검색화면 이동
+    @GetMapping("/posts/search")
+    public String search(){
+        return  "blog/search";
+    }
+
+    //카테고리 검색
+    @GetMapping("/posts/category/{category}")
+    public String category(@PathVariable("category") String cat ,Model model){
+        model.addAttribute("posts",postsService.findCategory(cat));
+        System.out.println(cat);
+        return "blog/search";
+
     }
 
 

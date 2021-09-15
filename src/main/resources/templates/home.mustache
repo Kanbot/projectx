@@ -4,7 +4,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="#page-top">kanbot</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>
         </button>
@@ -13,7 +14,22 @@
                 <li class="nav-item"><a class="nav-link" href="/posts/blog">블로그</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="/">알고리즘</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="/posts/dev">배포 환경</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">로그인</a></li>
+                <!-- userName이 존재하지 않아서 true인 경우 -->
+                {{^name}}
+                <li class="nav-item"><a class="nav-link" href="/posts/login">
+                      로그인
+                </a></li>
+                {{/name}}
+                <!-- userName이 존재해서 true인 경우 -->
+                {{#name}}
+                    <li class="nav-item">
+                        <a  class="nav-link">  {{name}} 님 </a>
+                    </li>
+                    <li class="nav-item">
+                       <a  class="nav-link" href="/logout">Logout</a>
+                    </li>
+
+                {{/name}}
 
             </ul>
         </div>
@@ -29,9 +45,9 @@
         <!-- Icon Divider-->
         <br>
         <div class="divider-custom divider-light">
-            <div class="divider-custom-line" ></div>
+            <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-            <div class="divider-custom-line" ></div>
+            <div class="divider-custom-line"></div>
         </div>
         <br>
 
@@ -48,7 +64,8 @@
         </div>
         <ul class="timeline">
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/js/app/assets/img/about/1.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/js/app/assets/img/about/1.jpg"
+                                                 alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>유승호</h4>
@@ -59,7 +76,8 @@
                 </div>
             </li>
             <li class="timeline-inverted">
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/js/app/assets/img/about/2.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/js/app/assets/img/about/2.jpg"
+                                                 alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>자기소개</h4>
@@ -71,22 +89,24 @@
                 </div>
             </li>
             <li>
-                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/js/app/assets/img/about/3.jpg" alt="..." /></div>
+                <div class="timeline-image"><img class="rounded-circle img-fluid" src="/js/app/assets/img/about/3.jpg"
+                                                 alt="..."/></div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
                         <h4>항상 탐구하는 사람</h4>
 
                     </div>
-                    <div class="timeline-body"><p class="text-muted">처음 프로그램을 코딩 했던 그 순간 처럼<br> 고민 하던 알고리즘을 풀어냈던 그 순간 같이 <br> 항상 새롭고 재밌게 코딩 하며 발전하는 <br> 개발자가 되고 싶다.</p></div>
+                    <div class="timeline-body"><p class="text-muted">처음 프로그램을 코딩 했던 그 순간 처럼<br> 고민 하던 알고리즘을 풀어냈던 그 순간 같이
+                        <br> 항상 새롭고 재밌게 코딩 하며 발전하는 <br> 개발자가 되고 싶다.</p></div>
                 </div>
             </li>
             <li class="timeline-inverted">
                 <div class="timeline-image">
                     <h4>
                         Be Part
-                        <br />
+                        <br/>
                         Of My
-                        <br />
+                        <br/>
                         Story!
                     </h4>
                 </div>
@@ -110,7 +130,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/js/app/assets/img/portfolio/1.jpg" alt="..." />
+                        <img class="img-fluid" src="/js/app/assets/img/portfolio/1.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">개발 언어</div>
@@ -125,7 +145,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/js/app/assets/img/portfolio/2.jpg" alt="..." />
+                        <img class="img-fluid" src="/js/app/assets/img/portfolio/2.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">프레임워크</div>
@@ -140,7 +160,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/js/app/assets/img/portfolio/3.jpg" alt="..." />
+                        <img class="img-fluid" src="/js/app/assets/img/portfolio/3.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">데이터베이스</div>
@@ -155,11 +175,11 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/js/app/assets/img/portfolio/4.jpg" alt="..." />
+                        <img class="img-fluid" src="/js/app/assets/img/portfolio/4.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">배포환경</div>
-                        <div class="portfolio-caption-subheading text-muted">Hosting environment </div>
+                        <div class="portfolio-caption-subheading text-muted">Hosting environment</div>
                     </div>
                 </div>
             </div>
@@ -170,7 +190,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/js/app/assets/img/portfolio/5.jpg" alt="..." />
+                        <img class="img-fluid" src="/js/app/assets/img/portfolio/5.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">깃허브</div>
@@ -185,7 +205,7 @@
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="/js/app/assets/img/portfolio/6.jpg" alt="..." />
+                        <img class="img-fluid" src="/js/app/assets/img/portfolio/6.jpg" alt="..."/>
                     </a>
                     <div class="portfolio-caption">
                         <div class="portfolio-caption-heading">개발 툴</div>
@@ -247,30 +267,36 @@
         <!-- To make this form functional, sign up at-->
         <!-- https://startbootstrap.com/solution/contact-forms-->
         <!-- to get an API token!-->
-        <form id="contactForm" method="post" action="https://script.google.com/macros/s/AKfycbwHIoW5TlIXVqjhXmeNmL6njn3H1AsLPRRhXefo/exec">
+        <form id="contactForm" method="post"
+              action="https://script.google.com/macros/s/AKfycbwHIoW5TlIXVqjhXmeNmL6njn3H1AsLPRRhXefo/exec">
             <div class="row align-items-stretch mb-5">
                 <div class="col-md-6">
                     <div class="form-group">
                         <!-- Name input-->
-                        <input class="form-control" id="usr" name="username" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                        <input class="form-control" id="usr" name="username" type="text" placeholder="Your Name *"
+                               data-sb-validations="required"/>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                     </div>
                     <div class="form-group">
                         <!-- Email address input-->
-                        <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                        <input class="form-control" id="email" name="email" type="email" placeholder="Your Email *"
+                               data-sb-validations="required,email"/>
                         <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                         <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                     </div>
                     <div class="form-group mb-md-0">
                         <!-- Phone number input-->
-                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="Your Phone *"
+                               data-sb-validations="required"/>
+                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-group-textarea mb-md-0">
                         <!-- Message input-->
-                        <textarea class="form-control" id="comment"  placeholder="Your Message *" data-sb-validations="required"></textarea>
+                        <textarea class="form-control" id="comment" placeholder="Your Message *"
+                                  data-sb-validations="required"></textarea>
                         <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                     </div>
                 </div>
@@ -288,9 +314,13 @@
             <!---->
             <!-- This is what your users will see when there is-->
             <!-- an error submitting the form-->
-            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+            <div class="d-none" id="submitErrorMessage">
+                <div class="text-center text-danger mb-3">Error sending message!</div>
+            </div>
             <!-- Submit Button-->
-            <div class="text-center"><button class="btn btn-primary btn-xl" id="btn-email" type="submit">Send Message</button></div>
+            <div class="text-center">
+                <button class="btn btn-primary btn-xl" id="btn-email" type="submit">Send Message</button>
+            </div>
 
         </form>
     </div>
@@ -310,7 +340,8 @@
 <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg"
+                                                                  alt="Close modal"/></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -321,10 +352,9 @@
                             <div class="row text-center">
                                 <div class="col-md-4">
                         <span>
-                            <img src="/js/app/assets/img/java1.jpg" />
+                            <img src="/js/app/assets/img/java1.jpg"/>
                             <center><strong><p style="font-size: 50px;">자바 </p></strong></center>
                         </span>
-
 
 
                                 </div>
@@ -363,7 +393,8 @@
 <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg"
+                                                                  alt="Close modal"/></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -377,7 +408,6 @@
                             <img src="/js/app/assets/img/spring.jpg" width="225px" height="225px"/>
                             <center><strong><p style="font-size: 50px;">스프링 </p></strong></center>
                         </span>
-
 
 
                                 </div>
@@ -406,7 +436,8 @@
 <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg"
+                                                                  alt="Close modal"/></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -422,7 +453,6 @@
 
 
                         </span>
-
 
 
                                 </div>
@@ -451,7 +481,8 @@
 <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg"
+                                                                  alt="Close modal"/></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -467,14 +498,12 @@
                         </span>
 
 
-
                                 </div>
                                 <div class="col-md-4">
                         <span>
                             <img src="/js/app/assets/img/rds.jpg" width="225px" height="225px"/>
                             <center><strong><p style="font-size: 50px;">AWS-RDS</p></strong></center>
                         </span>
-
 
 
                                 </div>
@@ -496,14 +525,12 @@
                         </span>
 
 
-
                                 </div>
                                 <div class="col-md-4">
                         <span>
                             <img src="/js/app/assets/img/GitHub.jpg" width="225px" height="225px"/>
                             <center><strong><p style="font-size: 50px;">Github</p></strong></center>
                         </span>
-
 
 
                                 </div>
@@ -532,7 +559,8 @@
 <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg"
+                                                                  alt="Close modal"/></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -540,8 +568,8 @@
                             <!-- Project details-->
                             <h2 class="text-uppercase">깃허브</h2>
                             <p class="item-intro text-muted">Github</p>
-                            <img class="img-fluid d-block mx-auto" src="/js/app/assets/img/portfolio/5.jpg" alt="..." />
-                            <a href =https://github.com/Kanbot>https://github.com/Kanbot</a><br><br><br>
+                            <img class="img-fluid d-block mx-auto" src="/js/app/assets/img/portfolio/5.jpg" alt="..."/>
+                            <a href=https://github.com/Kanbot>https://github.com/Kanbot</a><br><br><br>
                             <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                 <i class="fas fa-times me-1"></i>
                                 Close Project
@@ -557,7 +585,8 @@
 <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg" alt="Close modal" /></div>
+            <div class="close-modal" data-bs-dismiss="modal"><img src="/js/app/assets/img/close-icon.svg"
+                                                                  alt="Close modal"/></div>
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -573,14 +602,12 @@
                         </span>
 
 
-
                                 </div>
                                 <div class="col-md-4">
                         <span>
                             <img src="/js/app/assets/img/eclipse.jpg" width="225px" height="225px"/>
                             <center><strong><p style="font-size: 35px;">Eclipse</p></strong></center>
                         </span>
-
 
 
                                 </div>

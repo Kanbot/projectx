@@ -4,6 +4,7 @@ package com.jojoldu.book.spring.web;
 import com.jojoldu.book.spring.service.PostsService;
 import com.jojoldu.book.spring.web.dto.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,6 +40,13 @@ public class PostsApiController {
     @GetMapping("/api/v1/posts/list")
     public List<PostsListResponseDto> findAll() {
         return postsService.findAllDesc();
+    }
+
+    //검색 결과창 이동
+    @PutMapping("/posts/search/{search}")
+    public String search(@PathVariable String search, Model model){
+        model.addAttribute("posts",postsService.search(search));
+        return "blog/search";
     }
 
 

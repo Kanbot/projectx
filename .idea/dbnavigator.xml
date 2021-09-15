@@ -33,7 +33,7 @@
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
       <console name="Connection 1" type="STANDARD" schema="projectx" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from posts where category = '개발']]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select  * from posts where title like '%c%' or content like '%c%' or author like '%c%']]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

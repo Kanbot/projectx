@@ -12,6 +12,7 @@ public class PostsnewListDto {
     private String content;
     private String author;
     private LocalDateTime modifiedDate;
+    private String category;
 
    public   PostsnewListDto(Posts entity){
         this.id =entity.getId();

@@ -16,6 +16,9 @@ var main = {
         $('#btn-search').on('click', function () {
                     _this.search();
                 });
+        $('#btn-category').on('click', function () {
+                            _this.category();
+                        });
     },
      save : function () {
 
@@ -117,7 +120,7 @@ var main = {
             alert('글이 삭제되었습니다.');
             window.location.href = '/posts/blog';
         }).fail(function (error) {
-            alert(JSON.stringify(error));
+            alert("삭제 권한이 없습니다.");
         });
         }else{
         return;
@@ -125,9 +128,8 @@ var main = {
     },
      search :function () {
 
-               var data = {
-                search: $('#search').val()
-               };
+               var search = $('#search').val();
+
 
              if($('#search').val() == ""){
                             alert("검색어를 입력해주세요");
@@ -135,18 +137,39 @@ var main = {
                             }
 
             $.ajax({
-                type: 'Post',
-                url: '/posts/search/'+search,
-                dataType: 'json',
-                contentType:'application/json; charset=utf-8',
-                data: JSON.stringify(data)
+               type: 'PUT',
+               url: '/api/v1/posts/'+id,
+               dataType: 'json',
+               contentType:'application/json; charset=utf-8'
+
             }).done(function() {
                 alert("검색");
-                window.location.href = '/posts/search';
+                window.location.href = 'blog/search';
             }).fail(function (error) {
                 alert(JSON.stringify(error));
             });
         },
+
+         category : function () {
+                var data = {
+                     category: $('#category').val()
+
+                };
+
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/posts/category/'+category,
+                    dataType: 'json',
+                    contentType:'application/json; charset=utf-8',
+                    data: JSON.stringify(data)
+                }).done(function() {
+                    alert('검색');
+
+                }).fail(function (error) {
+                    alert(JSON.stringify(error));
+                });
+            },
 
 
 };

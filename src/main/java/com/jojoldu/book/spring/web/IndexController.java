@@ -92,6 +92,13 @@ public class IndexController {
         return  "blog/search";
     }
 
+    //로그인 이동
+    @GetMapping("/posts/login")
+    public String login(@LoginUser SessionUser user,Model model){
+        model.addAttribute("name",user);
+        return  "home";
+    }
+
     //카테고리 검색
     @GetMapping("/posts/category/{category}")
     public String category(@PathVariable("category") String cat ,Model model){

@@ -61,9 +61,16 @@ public class PostsService {
     }
     @Transactional(readOnly = true)
     public List<PostsnewListDto> search(String search){
-        System.out.println(search);
         return postsRepository.search(search).stream().map(PostsnewListDto::new).collect(Collectors.toList());
 
+    }
+    @Transactional(readOnly = true)
+    public List<PostsnewListDto> list(){
+        return postsRepository.list().stream().map(PostsnewListDto::new).collect(Collectors.toList());
+    }
+    @Transactional
+    public Long count(){
+        return postsRepository.count();
     }
 
 

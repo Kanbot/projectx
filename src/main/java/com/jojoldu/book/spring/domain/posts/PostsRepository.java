@@ -14,9 +14,13 @@ public interface PostsRepository extends JpaRepository<Posts,Long> {
     @Modifying
     @Query("UPDATE Posts x set content = content || '경고! 내용을 수정하시기 바랍니다.' where id =x.id")
     void revise(Long id);
-    @Query("SELECT x FROM Posts x where x.title like %:search% or x.content like %:search% or x.author like %:search% or " +
-            "x.category like %:search%")
+    @Query("SELECT x FROM Posts x where LOWER(x.title) like %:search% or LOWER(x.content) like %:search% or LOWER(x.author) like %:search% or " +
+            "LOWER(x.category) like %:search%")
     List<Posts> search(String search);
+    @Query(value = "SELECT * FROM Posts  order by id desc  limit 0, 5",nativeQuery = true)
+    List<Posts> list();
+    @Query(value = "SELECT COUNT(*) FROM Posts",nativeQuery = true)
+    long count();
 
 
 

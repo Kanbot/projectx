@@ -24,12 +24,16 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
+        <schema name="projectx" object-types="table, view, procedure, function" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1">
       <console name="Connection 1" type="STANDARD" schema="projectx" session="Main" />
-      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select  * from posts where title like '%c%' or content like '%c%' or author like '%c%']]></console>
+      <console name="projectx" type="STANDARD" schema="projectx" session="Main"><![CDATA[select * from posts order by id desc  limit 0, 5;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -41,6 +45,7 @@
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" dataset="projectx.user" active-filter-id="" />
     <filter-actions connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" dataset="projectx.SPRING_SESSION" active-filter-id="" />
+    <filter-actions connection-id="3333dc3d-b525-40a1-a8b4-5581f6eb91a1" dataset="projectx.posts" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

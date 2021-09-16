@@ -42,6 +42,7 @@ public class IndexController {
     public String info(Model model ,@LoginUser SessionUser user){
         model.addAttribute("posts",postsService.findAllDesc());
         model.addAttribute("name",user);
+        System.out.println(model.getClass());
         return "blog/blog";
     }
 
@@ -100,6 +101,15 @@ public class IndexController {
     public String login(@LoginUser SessionUser user,Model model){
         model.addAttribute("name",user);
         return  "home";
+    }
+
+    //페이징
+    @GetMapping("/posts/page")
+    public String page(Model model){
+
+        model.addAttribute("posts",postsService.list());
+
+        return "blog/blog";
     }
 
 

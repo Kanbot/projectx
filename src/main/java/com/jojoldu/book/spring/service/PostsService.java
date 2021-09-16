@@ -54,20 +54,16 @@ public class PostsService {
         return new PostsResponseDto(entity);
     }
     @Transactional(readOnly = true)
-    public List<PostsResponseDto> search(String search){
-        return postsRepository.search(search).stream().map(PostsResponseDto::new).collect(Collectors.toList());
-
-    }
-
-    @Transactional(readOnly = true)
     public List<PostsListResponseDto> findAllDesc() {
         return postsRepository.findAllDesc().stream()
                 .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
     }
     @Transactional(readOnly = true)
-    public List<PostsnewListDto> findCategory(String category){
-        return postsRepository.findAll(category).stream().map(PostsnewListDto::new).collect(Collectors.toList());
+    public List<PostsnewListDto> search(String search){
+        System.out.println(search);
+        return postsRepository.search(search).stream().map(PostsnewListDto::new).collect(Collectors.toList());
+
     }
 
 

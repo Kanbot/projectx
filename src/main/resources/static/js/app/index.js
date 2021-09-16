@@ -126,35 +126,8 @@ var main = {
         return;
         }
     },
-     search :function () {
-
-               var search = $('#search').val();
-
-
-             if($('#search').val() == ""){
-                            alert("검색어를 입력해주세요");
-                            return;
-                            }
-
-            $.ajax({
-               type: 'PUT',
-               url: '/api/v1/posts/'+id,
-               dataType: 'json',
-               contentType:'application/json; charset=utf-8'
-
-            }).done(function() {
-                alert("검색");
-                window.location.href = 'blog/search';
-            }).fail(function (error) {
-                alert(JSON.stringify(error));
-            });
-        },
-
          category : function () {
-                var data = {
-                     category: $('#category').val()
-
-                };
+                var category = $('#category').val();
                 alert(category);
 
                 $.ajax({
@@ -162,9 +135,9 @@ var main = {
                     url: '/posts/category/'+category,
                     dataType: 'json',
                     contentType:'application/json; charset=utf-8',
-                    data: JSON.stringify(data)
                 }).done(function() {
                     alert('검색');
+                    window.location.href = '/posts/blog';
 
                 }).fail(function (error) {
                     alert(JSON.stringify(error));

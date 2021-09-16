@@ -20,6 +20,7 @@ public class PostsnewListDto {
         this.content=entity.getContent();
         this.author=entity.getAuthor();
         this.modifiedDate=entity.getModifiedDate();
+        this.category=entity.getCategory();
 
     }
 }

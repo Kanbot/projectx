@@ -42,12 +42,6 @@ public class PostsApiController {
         return postsService.findAllDesc();
     }
 
-    //검색 결과창 이동
-    @PutMapping("/posts/search/{search}")
-    public String search(@PathVariable String search, Model model){
-        model.addAttribute("posts",postsService.search(search));
-        return "blog/search";
-    }
 
 
 }

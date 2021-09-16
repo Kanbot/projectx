@@ -2,14 +2,19 @@ package com.jojoldu.book.spring.web;
 
 import com.jojoldu.book.spring.config.auth.LoginUser;
 import com.jojoldu.book.spring.config.auth.dto.SessionUser;
+import com.jojoldu.book.spring.domain.posts.PostsRepository;
 import com.jojoldu.book.spring.service.PostsService;
 import com.jojoldu.book.spring.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @Controller
@@ -39,10 +44,12 @@ public class IndexController {
         model.addAttribute("name",user);
         return "blog/blog";
     }
-    @GetMapping("/posts/dodo")
-    public  String  dodo1 (String search ,Model model){
+
+    //검색 기능
+    @GetMapping("/posts/search")
+    public String search( String search, Model model){
         model.addAttribute("posts",postsService.search(search));
-        return "blog/search";
+        return "blog/blog";
     }
 
     //블로그 포스트 이동
@@ -86,11 +93,7 @@ public class IndexController {
         return  "dev/dev";
     }
 
-    //검색화면 이동
-    @GetMapping("/posts/search")
-    public String search(){
-        return  "blog/search";
-    }
+
 
     //로그인 이동
     @GetMapping("/posts/login")
@@ -99,14 +102,6 @@ public class IndexController {
         return  "home";
     }
 
-    //카테고리 검색
-    @GetMapping("/posts/category/{category}")
-    public String category(@PathVariable("category") String cat ,Model model){
-        model.addAttribute("posts",postsService.findCategory(cat));
-        System.out.println(cat);
-        return "blog/search";
-
-    }
 
 
 

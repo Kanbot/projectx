@@ -155,7 +155,7 @@ var main = {
                      category: $('#category').val()
 
                 };
-
+                alert(category);
 
                 $.ajax({
                     type: 'GET',

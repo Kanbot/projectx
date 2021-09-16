@@ -13,12 +13,6 @@ var main = {
             _this.delete();
         });
 
-        $('#btn-search').on('click', function () {
-                    _this.search();
-                });
-        $('#btn-category').on('click', function () {
-                            _this.category();
-                        });
     },
      save : function () {
 
@@ -126,23 +120,7 @@ var main = {
         return;
         }
     },
-         category : function () {
-                var category = $('#category').val();
-                alert(category);
 
-                $.ajax({
-                    type: 'GET',
-                    url: '/posts/category/'+category,
-                    dataType: 'json',
-                    contentType:'application/json; charset=utf-8',
-                }).done(function() {
-                    alert('검색');
-                    window.location.href = '/posts/blog';
-
-                }).fail(function (error) {
-                    alert(JSON.stringify(error));
-                });
-            },
 
 
 };

@@ -105,9 +105,9 @@ public class IndexController {
 
     //페이징
     @GetMapping("/posts/page")
-    public String page(Model model){
+    public String page(Model model,String start ,String end){
 
-        model.addAttribute("posts",postsService.list());
+        model.addAttribute("posts",postsService.list(start,end));
 
         return "blog/blog";
     }

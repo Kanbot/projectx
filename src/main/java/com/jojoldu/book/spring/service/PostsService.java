@@ -65,8 +65,8 @@ public class PostsService {
 
     }
     @Transactional(readOnly = true)
-    public List<PostsnewListDto> list(){
-        return postsRepository.list().stream().map(PostsnewListDto::new).collect(Collectors.toList());
+    public List<PostsnewListDto> list(String start, String end){
+        return postsRepository.list(start,end).stream().map(PostsnewListDto::new).collect(Collectors.toList());
     }
     @Transactional
     public Long count(){

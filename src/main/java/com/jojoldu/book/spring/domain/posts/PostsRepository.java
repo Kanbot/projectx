@@ -17,7 +17,7 @@ public interface PostsRepository extends JpaRepository<Posts,Long> {
     @Query("SELECT x FROM Posts x where LOWER(x.title) like %:search% or LOWER(x.content) like %:search% or LOWER(x.author) like %:search% or " +
             "LOWER(x.category) like %:search%")
     List<Posts> search(String search);
-    @Query(value = "SELECT * FROM Posts  order by id desc  limit ?1, ?2",nativeQuery = true)
+    @Query(value = "SELECT * FROM Posts  order by id desc  limit '?1', '?2'",nativeQuery = true)
     List<Posts> list(String start ,String end);
     @Query(value = "SELECT COUNT(*) FROM Posts",nativeQuery = true)
     long count();

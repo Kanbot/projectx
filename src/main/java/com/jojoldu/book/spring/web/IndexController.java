@@ -111,11 +111,18 @@ public class IndexController {
 
         return "blog/blog";
     }
+    //테스트
     @GetMapping("/posts/pp")
     public String pp(Model model){
         model.addAttribute("posts",postsService.page());
         return "blog/blog";
     }
+    //인덱스
+    @GetMapping("/index")
+    public String index(){
+        return "index/index";
+    }
+    
 
 
 

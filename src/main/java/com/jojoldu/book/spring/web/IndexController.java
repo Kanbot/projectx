@@ -111,6 +111,11 @@ public class IndexController {
 
         return "blog/blog";
     }
+    @GetMapping("/posts/pp")
+    public String pp(Model model){
+        model.addAttribute("posts",postsService.page());
+        return "blog/blog";
+    }
 
 
 

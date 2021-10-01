@@ -45,12 +45,12 @@
     <div class="row">
         <div class="col-lg-8"></div>
         <div class="col-lg-3">
-             <form action="/posts/search" method="get">
-            <input type="text" id="search" name="search" style="height: 35px"/>
-            <button type="submit"  style=" color: #fff;background-color: #0085A1;
+            <form action="/posts/search" method="get">
+                <input type="text" id="search" name="search" style="height: 35px"/>
+                <button type="submit"  style=" color: #fff;background-color: #0085A1;
              border-color: #0085A1;   font-weight: 400; border: 1px ; height: 35px;">
-                <i class="fas fa-search"></i></button>
-             </form>
+                    <i class="fas fa-search"></i></button>
+            </form>
 
 
         </div>
@@ -58,36 +58,41 @@
 
         <div class="col-lg-1"></div>
     </div>
-    {{#posts}}
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="/posts/posts/{{id}}">
+    <div class="row">
+        <div class="col-lg-8">
+            {{#posts}}
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-md-10 col-lg-8 col-xl-7">
+                            <!-- Post preview-->
+                            <div class="post-preview">
+                                <a href="/posts/posts/{{id}}">
 
-                            <h2 class="post-title">{{title}}</h2>
-                            <h3 class="post-subtitle">{{category}}</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            {{author}}
-                            {{modifiedDate}}
-                        </p>
+                                    <h2 class="post-title">{{title}}</h2>
+                                    <h3 class="post-subtitle">{{category}}</h3>
+                                </a>
+                                <p class="post-meta">
+                                    Posted by
+                                    {{author}}
+                                    {{modifiedDate}}
+                                </p>
+                            </div>
+                            <!-- Divider-->
+                            <hr class="my-4"/>
+
+                        </div>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4"/>
-
                 </div>
-            </div>
-        </div>
-    {{/posts}}
-    {{^posts}}
-        <br><br>
-        <center> <div><h4> 글이 없습니다</h4></div></center>
-        <br><br>
+            {{/posts}}
 
-    {{/posts}}
+            {{^posts}}
+                <br><br>
+                <center> <div><h4> 글이 없습니다</h4></div></center>
+                <br><br>
+
+            {{/posts}}
+        </div>
+
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
@@ -99,8 +104,8 @@
             </div>
 
         </div>
-        </div>
     </div>
+
 </table>
 
 
